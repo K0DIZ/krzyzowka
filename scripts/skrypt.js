@@ -5,7 +5,7 @@ let finalAnswer = "informatyka";
 $(document).ready(function() {
     $("#submit").click(function(){
         let userFinalAnswer = ["","","","","","","","","","",""];
-        let userAnswers = []
+        let userAnswers = ["","","","","","","","","","",""]
         isCorrect = true;
         for (j = 0; j < correctAnswers.length; j++){
             let tempTable = [];
@@ -16,7 +16,7 @@ $(document).ready(function() {
             userAnswers[j] = tempTable;
             for (k = 0; k < correctAnswers[j].length; k++) {
                 if (userAnswers[j][k] == correctAnswers[j][k]) {
-                    document.getElementsByClassName(`q${j}`)[k].style.backgroundColor = "green";
+                    document.getElementsByClassName(`q${j}`)[k].style.backgroundColor = "limegreen";
                 }
                 else {
                     document.getElementsByClassName(`q${j}`)[k].style.backgroundColor = "red";
@@ -29,39 +29,37 @@ $(document).ready(function() {
         };
             for (f = 0; f < finalAnswer.length; f++) {
                 if (finalAnswer[f] == userFinalAnswer[f]) {
-                    document.getElementsByClassName(`p${f}`)[0].style.backgroundColor = "green";
+                    document.getElementsByClassName(`p${f}`)[0].style.backgroundColor = "limegreen";
                 }
                 else {
                     document.getElementsByClassName(`p${f}`)[0].style.backgroundColor = "red";
                     isCorrect = false;
                 };
             };
-        result = document.getElementById("p-user-final-result");
-        console.log(userFinalAnswer);
-        console.log(finalAnswer);
-        console.log(isCorrect);
+        result1 = document.getElementById("p-user-final-result");
         for (d = 0; d < finalAnswer.length; d++) {
             if (userFinalAnswer[d] != finalAnswer[d]) {
                 isCorrect = false;
             }
         };
         if (isCorrect) {
-            result.innerHTML = "Gratulacje! Krzyżówka rozwiązana poprawnie!";
-            result.style.color = "green";
+            result1.innerHTML = "Gratulacje! Krzyżówka rozwiązana poprawnie!";
+            result1.style.color = "limegreen";
         }
         else {
-            result.innerHTML = "Nie wszystkie odpowiedzi są poprawne!";
-            result.style.color = "red";
+            result1.innerHTML = "Nie wszystkie odpowiedzi są poprawne!";
+            result1.style.color = "red";
         };
     });
     $("#reset").click(function() {
         for (c = 0; c < finalAnswer.length; c++) {
+            document.getElementsByClassName("result")[c].innerHTML = ""
             document.getElementsByClassName(`p${c}`)[0].innerHTML = "";
             document.getElementsByClassName(`p${c}`)[0].style.backgroundColor = "white";
             for (j = 0; j < correctAnswers[c].length; j++){
                 document.getElementsByClassName(`q${c}`)[j].style.backgroundColor = "white";
             };
         };
-        result.innerHTML = "";
+        result1.innerHTML = "";
     });
 });

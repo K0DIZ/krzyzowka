@@ -14,7 +14,6 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
     flex-direction: column;
     gap: 3vh;
 }
@@ -38,6 +37,7 @@ input {
     width: 60px;
     height: 60px;
     background-color: white;
+    opacity: 0.8;
     border: 3px solid rgb(162,142,255);
     border-radius: 1vw;
     text-align: center;
@@ -45,6 +45,9 @@ input {
     font-weight: bold;
     font-size: 30px;
     box-shadow: 0px 0px 2px #303030;
+}
+.f0, .f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8, .f9, .f10 {
+    opacity: 1;
 }
 span {
     display: block;
@@ -118,4 +121,12 @@ input[type="reset"],input[type="button"] {
 #user-final-result p{
     font-size: 30px;
     text-align: center;
+}
+input::placeholder {
+    color: #303030;
+    opacity: 0.7;
+    font-size: 18px;
+    position: relative;
+    top: -18px;
+    left: -18px;
 }
