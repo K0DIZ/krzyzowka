@@ -21,7 +21,7 @@ main {
 }
 header h1{
     text-align: center;
-    letter-spacing: 6px;
+    letter-spacing: 10px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 60px;
@@ -50,8 +50,8 @@ header {
 #wrapper2 {
     width: 50%;
 }
-@media only screen and (max-width: 1900px) {
-    /* For mobile phones: */
+@media only screen and (max-width: 1950px) {
+    /* For smaller windows: */
     main {
       flex-wrap: wrap;
     }
@@ -61,7 +61,20 @@ header {
     #wrapper2 {
         width: 80%;
     }
-  }
+}
+@media only screen and (max-width: 1200px) {
+    /* For mobile phones */
+    main {
+      flex-wrap: wrap;
+      width: 95%;
+    }
+    #wrapper1 {
+        width: 100%;
+    }
+    #wrapper2 {
+        width: 100%;
+    }
+}
 table {
     display: flex;
 }
@@ -73,7 +86,6 @@ td {
     margin: 2px;
 }
 input {
-    flex-grow: 10;
     color: black;
     width: 100%;
     height: 60px;
@@ -84,7 +96,7 @@ input {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     box-shadow: 0px 0px 2px #303030;
     cursor: pointer;
 }
@@ -99,25 +111,26 @@ span {
     text-align: center;
     font-size: 30px;
 }
-/* input:active {
-    border: 3px solid rgb(30, 0, 165);
-} */
 #krzyzowka {
     height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-input[type="reset"],input[type="button"] {
+input[type="button"] {
     font-size: 15px;
-    width: 20%;
     padding: 5px 10px;
     background-color: rgb(255, 255, 255);
     opacity: 1;
     display: inline-block;
     margin: 15px;
+    font-weight: bold;
 }
 input:hover {
+    background-color: rgb(224, 216, 255);
+    transition-duration: 200ms;
+}
+input:focus {
     background-color: rgb(224, 216, 255);
     transition-duration: 200ms;
 }
@@ -141,10 +154,10 @@ input:hover {
     margin-right: auto;
 }
 #reset {
-    width: 30%;
+    width: 40%;
 }
 #submit {
-    width: 30%;
+    width: 40%;
 }
 #result {
     margin-top: 50px;
@@ -155,9 +168,10 @@ input:hover {
     width: 100%;
 }
 #result p {
-    font-size: 25px;
+    font-size: 35px;
     text-transform: capitalize;
     text-align: center;
+    font-weight: bold;
 }
 #user-final-result {
     height: 20px;
@@ -165,7 +179,8 @@ input:hover {
     margin-bottom: 30px;
 }
 #user-final-result p{
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
     text-align: center;
 }
 input::placeholder {
@@ -177,7 +192,7 @@ input::placeholder {
     left: -18px;
 }
 #questions {
-    font-size: 20px;
+    font-size: 21px;
     margin: auto;
     background: rgb(255,231,255);
     background: linear-gradient(45deg, rgba(255,231,255,1) 0%, rgba(215,255,252,1) 100%);
