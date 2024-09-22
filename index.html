@@ -22,9 +22,9 @@
         </header>
         <div id="wrapper">
             <article>
-                <div id="krzyzowka">
-                    <table>
-                        <form>
+                <form>
+                    <div id="krzyzowka">
+                        <table>
                             <tr>
                                 <td>
                             
@@ -646,11 +646,30 @@
                                     
                                 </td>
                             </tr>
-                        </form>
-                    </table>
+                        </table>
+                    </div>
+                    <div id="result-panel">
+                        <input type="reset" id="reset" value="Wyczyść krzyżówkę">
+                        <input type="button" id="submit" value="Sprawdź krzyżówkę">
+                        <div id="result">
+                            <p class="result p0"></p>
+                            <p class="result p1"></p>
+                            <p class="result p2"></p>
+                            <p class="result p3"></p>
+                            <p class="result p4"></p>
+                            <p class="result p5"></p>
+                            <p class="result p6"></p>
+                            <p class="result p7"></p>
+                            <p class="result p8"></p>
+                            <p class="result p9"></p>
+                            <p class="result p10"></p>
+                        </div>
+                    </div>
+                </form>
+                <div id="user-final-result">
+                    <p id="p-user-final-result"></p>
                 </div>
             </article>
-            <button id="submit">Sprawdź krzyżówkę</button>
         </div>
     </main>
 </body>
