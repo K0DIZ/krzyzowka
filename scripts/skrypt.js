@@ -15,7 +15,7 @@ $(document).ready(function() {
             };
             userAnswers[j] = tempTable;
             for (k = 0; k < correctAnswers[j].length; k++) {
-                if (userAnswers[j][k] == correctAnswers[j][k]) {
+                if (userAnswers[j][k] == correctAnswers[j].charAt(k)) {
                     document.getElementsByClassName(`q${j}`)[k].style.backgroundColor = "limegreen";
                 }
                 else {
@@ -28,7 +28,7 @@ $(document).ready(function() {
             userFinalAnswer[j] = tempUserFinalAnswer;
         };
             for (f = 0; f < finalAnswer.length; f++) {
-                if (finalAnswer[f] == userFinalAnswer[f]) {
+                if (finalAnswer.charAt(f) == userFinalAnswer[f]) {
                     document.getElementsByClassName(`p${f}`)[0].style.backgroundColor = "limegreen";
                 }
                 else {
@@ -38,7 +38,7 @@ $(document).ready(function() {
             };
         result1 = document.getElementById("p-user-final-result");
         for (d = 0; d < finalAnswer.length; d++) {
-            if (userFinalAnswer[d] != finalAnswer[d]) {
+            if (userFinalAnswer[d] != finalAnswer.charAt(d)) {
                 isCorrect = false;
             }
         };

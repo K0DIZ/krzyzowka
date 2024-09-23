@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <title>Krzyżówka</title>
+    <meta name="keywords" content="krzyżówka, informatyka, inf.03, technik informatyk">
+    <meta name="author" content="Konrad Zatorski">
+    <meta name="description" content="Krzyżówka opracowana na potrzeby zajęć szkolnych w 2024 roku.">
+    <title>Krzyżówka Informatyka</title>
+    <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- <script src="scripts/jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/skrypt.js"></script>
 </head>
 <body>
+    <!-- main header -->
     <header>
         <h1>Krzyżówka</h1>
     </header>
     <main>
+        <!-- left div wrapper -->
         <div id="wrapper1">
             <article>
                 <form>
+                    <!-- giant crossword div - 13x14 table -->
                     <div id="krzyzowka">
                         <table>
                             <tr>
@@ -648,30 +651,35 @@
                             </tr>
                         </table>
                     </div>
-                    <div id="result-panel">
+                    <div id="buttons-and-answers">
+                        <!-- reset and submit buttons -->
                         <input type="button" id="reset" onClick="window.location.reload();" value="Wyczyść krzyżówkę">
                         <input type="button" id="submit" value="Sprawdź krzyżówkę">
-                        <div id="result">
-                            <p class="result p0"></p>
-                            <p class="result p1"></p>
-                            <p class="result p2"></p>
-                            <p class="result p3"></p>
-                            <p class="result p4"></p>
-                            <p class="result p5"></p>
-                            <p class="result p6"></p>
-                            <p class="result p7"></p>
-                            <p class="result p8"></p>
-                            <p class="result p9"></p>
-                            <p class="result p10"></p>
+                        <!-- final answer 11 divs -->
+                        <div id="answer">
+                            <p class="answer-letter p0"></p>
+                            <p class="answer-letter p1"></p>
+                            <p class="answer-letter p2"></p>
+                            <p class="answer-letter p3"></p>
+                            <p class="answer-letter p4"></p>
+                            <p class="answer-letter p5"></p>
+                            <p class="answer-letter p6"></p>
+                            <p class="answer-letter p7"></p>
+                            <p class="answer-letter p8"></p>
+                            <p class="answer-letter p9"></p>
+                            <p class="answer-letter p10"></p>
                         </div>
                     </div>
                 </form>
+                <!-- final result div -->
                 <div id="user-final-result">
                     <p id="p-user-final-result"></p>
                 </div>
             </article>
         </div>
+        <!-- right div wrapper -->
         <div id="wrapper2">
+            <!-- all questions div -->
             <article>
             <div id="questions">
                 <div class="question">
@@ -733,6 +741,7 @@
             </article>
         </div>
     </main>
+    <!-- footer -->
     <footer>
         <p>Strona opracowana przez Konrada Zatorskiego &copy; 2024</p>
     </footer>
