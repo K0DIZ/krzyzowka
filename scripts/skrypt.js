@@ -51,17 +51,4 @@ $(document).ready(function() {
             result1.style.color = "red";
         };
     });
-    // reset page script - it is not used right now
-
-    // $("#reset").click(function() {
-    //     for (c = 0; c < finalAnswer.length; c++) {
-    //         document.getElementsByClassName("result")[c].innerHTML = ""
-    //         document.getElementsByClassName(`p${c}`)[0].innerHTML = " ";
-    //         document.getElementsByClassName(`p${c}`)[0].style.backgroundColor = "white";
-    //         for (j = 0; j < correctAnswers[c].length; j++){
-    //             document.getElementsByClassName(`q${c}`)[j].style.backgroundColor = "white";
-    //         };
-    //     };
-    //     result1.innerHTML = "";
-    // });
 });
